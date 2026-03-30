@@ -31,7 +31,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and Push Docker Image
         run: |
           docker build -t manal456/flask_devops_demo:latest .
